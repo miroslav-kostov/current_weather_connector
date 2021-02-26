@@ -18,7 +18,7 @@ def flatten_response(d):
 
 api_key = "5f99a6817d6b8f4677f941d31dcbbba7"
 
-city_name = input("For which city would you like to know the current weather? ")
+city_name = input("For which city would you like to know the current weather? \n")
 
 city_name_param_key = "q"
 api_key_key = "appid"
@@ -35,3 +35,5 @@ response_dict = flatten_response(response.json())
 with open('weather_file.csv', 'w') as file:
     w = csv.writer(file)
     w.writerows(response_dict.items())
+
+print("Thank you, your file was created!")
